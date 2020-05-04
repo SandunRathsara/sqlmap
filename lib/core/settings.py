@@ -16,6 +16,9 @@ from lib.core.enums import DBMS
 from lib.core.enums import DBMS_DIRECTORY_NAME
 from lib.core.enums import OS
 from thirdparty.six import unichr as _unichr
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # sqlmap version (<major>.<minor>.<month>.<monthly commit>)
 VERSION = "1.4.5.1"
@@ -681,7 +684,7 @@ DEFAULT_COOKIE_DELIMITER = ';'
 FORCE_COOKIE_EXPIRATION_TIME = "9999999999"
 
 # Github OAuth token used for creating an automatic Issue for unhandled exceptions
-GITHUB_REPORT_OAUTH_TOKEN = "NTYzYjhmZWJjYzc0Njg2ODJhNzhmNDg1YzM0YzlkYjk3N2JiMzE3Nw=="
+GITHUB_REPORT_OAUTH_TOKEN = os.getenv("GITHUB_REPORT_OAUTH_TOKEN")
 
 # Skip unforced HashDB flush requests below the threshold number of cached items
 HASHDB_FLUSH_THRESHOLD = 32
