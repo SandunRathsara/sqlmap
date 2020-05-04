@@ -157,7 +157,7 @@ from thirdparty.six.moves import http_client as _http_client
 from thirdparty.six.moves import http_cookiejar as _http_cookiejar
 from thirdparty.six.moves import urllib as _urllib
 from thirdparty.socks import socks
-from xml.etree.ElementTree import ElementTree
+from defusedxml.etree.ElementTree import ElementTree
 
 authHandler = _urllib.request.BaseHandler()
 chunkedHandler = ChunkedHandler()
